@@ -1,33 +1,43 @@
 
 const es1 = 'mail';
 const es2 = 'dadi';
-const choice = prompt(' Ciao che esercizio vuoi visualizzare? digita : mail oppure : dadi');
+const choice = prompt(' Ciao che esercizio vuoi visualizzare? digita: mail oppure: dadi');
 
 if (choice===es1) {
 
   
   const userList = ['user1@user.com','user2@user.com','user3@user.com'];
+  const userProof = prompt('Inserisci la tua mail!');
+  let tried = false;
   
-  for (let i= 0; i < userList.length; index++) {
+  for (let i= 0; i < userList.length; i++) {
 
     
-    const userProof = prompt('Inserisci la tua mail!');
+   
+    
 
     if(userProof===userList[i]){
 
-      alert('BENVENUTO!');
+      
+      tried = true;
     
       
-    }else{
-    
-      alert('ACCESSO NEGATO!');
-    
     }
 
     
     
   }
 
+  if (tried==true) {
+
+    alert('Benvenuto')
+    
+    
+  } else{
+
+    alert('Accesso negato')
+
+  }
 
   
 } else if(choice===es2) {
